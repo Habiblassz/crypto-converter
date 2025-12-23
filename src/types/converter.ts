@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type ConversionType =
 	| "crypto-to-cash"
 	| "cash-to-crypto"
