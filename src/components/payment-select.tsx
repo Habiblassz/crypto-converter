@@ -31,7 +31,11 @@ export function PaymentSelect({ label, value, onChange }: PaymentSelectProps) {
 				<div className="flex items-center gap-3 overflow-hidden">
 					{selectedOption ? (
 						<>
-							<span className="text-2xl shrink-0">{selectedOption.icon}</span>
+							<img
+								src={selectedOption.icon}
+								alt={selectedOption.label}
+								className="w-8 h-8 shrink-0 object-contain rounded-full p-1"
+							/>
 							<span className="text-lg text-[#2a2a2a] truncate">
 								{selectedOption.label}
 							</span>
@@ -59,9 +63,9 @@ export function PaymentSelect({ label, value, onChange }: PaymentSelectProps) {
 							}}
 							className="w-full flex items-center gap-3 px-6 py-4 hover:bg-[#f5f5f5] transition-colors text-left">
 							<img
-								src={selectedOption?.icon}
-								alt={selectedOption?.label}
-								className="w-6 h-6 block object-contain"
+								src={option.icon}
+								alt={option.label}
+								className="w-8 h-8 shrink-0 object-contain rounded-full p-1"
 							/>
 							<span className="font-medium text-[#2a2a2a]">{option.label}</span>
 						</button>
